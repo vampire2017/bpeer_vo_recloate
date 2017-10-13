@@ -1,0 +1,1428 @@
+init: 1
+Vocabulary loaded !! 
+init: 1
+Vocabulary loaded !! 
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：1
+callback  out..  
+init done
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：2
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：3
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：4
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：5
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：6
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：7
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：8
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：9
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：10
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：11
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：12
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：13
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：14
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：15
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：16
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：17
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：18
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：19
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：20
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：21
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：22
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：23
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：24
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：25
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：26
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：27
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：28
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：29
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：30
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：31
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：32
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：33
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：34
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：35
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：36
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：37
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：38
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：39
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：40
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：41
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：42
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：43
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：44
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：45
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：46
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：47
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：48
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：49
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：50
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：51
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：52
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：53
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：54
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：55
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：56
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：57
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：58
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：59
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：60
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：61
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：62
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：63
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：64
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：65
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：66
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：67
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：68
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：69
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：70
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：71
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：72
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：73
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：74
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：75
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：76
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：77
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：78
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：79
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：80
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：81
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：82
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：83
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：84
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：85
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：86
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：87
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：88
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：89
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：90
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：91
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：92
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：93
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：94
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：95
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：96
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：97
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：98
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：99
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：100
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：101
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：102
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：103
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：104
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：105
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：106
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：107
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：108
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：109
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：110
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：111
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：112
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：113
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：114
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：115
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：116
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：117
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：118
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：119
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：120
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：121
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：122
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：123
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：124
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：125
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：126
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：127
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：128
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：129
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：130
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：131
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：132
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：133
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：134
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：135
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：136
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：137
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：138
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：139
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：140
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：141
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：142
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：143
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：144
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：145
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：146
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：147
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：148
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：149
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：150
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：151
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：152
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：153
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：154
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：155
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：156
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：157
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：158
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：159
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：160
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：161
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：162
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：163
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：164
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：165
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：166
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：167
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：168
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：169
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：170
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：171
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：172
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：173
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：174
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：175
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：176
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：177
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：178
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：179
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：180
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：181
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：182
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：183
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：184
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：185
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：186
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：187
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：188
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：189
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：190
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：191
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：192
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：193
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：194
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：195
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：196
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：197
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：198
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：199
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：200
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：201
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：202
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+image  in..  
+save image  in..  
+save image  out..  
+数据集的大小：203
+callback  out..  
+test-- odom: 
+odom_x:1.1 odom_y:1.2 odom_th:0.3
+Thrift: Tue Sep 19 10:49:17 2017 TSocket::write_partial() send() <Host: ::ffff:127.0.0.1 Port: 44934>Connection reset by peer
+Thrift: Tue Sep 19 10:49:17 2017 TConnectedClient died: write() send(): Connection reset by peer
