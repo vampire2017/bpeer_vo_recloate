@@ -90,6 +90,12 @@ void VoRelocate::locateCb(Mat &image, pose2D odom)
 											+ std::to_string(imageLocate.y)
 											+ ",\"th\" : "
 											+ std::to_string(imageLocate.th)
+									        + ",\"odomX\" : "
+									        + std::to_string(odom.x)
+									        + ",\"odomY\" : "
+									        + std::to_string(odom.y)
+									        + ",\"odomTh\" : "
+									        + std::to_string(odom.th)
 											+ "}";
 
 									//@todo  here need to do sth   -->  output;
