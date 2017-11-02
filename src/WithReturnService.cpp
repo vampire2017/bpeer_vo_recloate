@@ -43,25 +43,9 @@ uint32_t WithReturnService_resultReturn_args::read(::apache::thrift::protocol::T
         }
         break;
       case 2:
-        if (ftype == ::apache::thrift::protocol::T_DOUBLE) {
-          xfer += iprot->readDouble(this->odom_x);
-          this->__isset.odom_x = true;
-        } else {
-          xfer += iprot->skip(ftype);
-        }
-        break;
-      case 3:
-        if (ftype == ::apache::thrift::protocol::T_DOUBLE) {
-          xfer += iprot->readDouble(this->odom_y);
-          this->__isset.odom_y = true;
-        } else {
-          xfer += iprot->skip(ftype);
-        }
-        break;
-      case 4:
-        if (ftype == ::apache::thrift::protocol::T_DOUBLE) {
-          xfer += iprot->readDouble(this->odom_th);
-          this->__isset.odom_th = true;
+        if (ftype == ::apache::thrift::protocol::T_STRUCT) {
+          xfer += this->data.read(iprot);
+          this->__isset.data = true;
         } else {
           xfer += iprot->skip(ftype);
         }
@@ -87,16 +71,8 @@ uint32_t WithReturnService_resultReturn_args::write(::apache::thrift::protocol::
   xfer += oprot->writeString(this->img_);
   xfer += oprot->writeFieldEnd();
 
-  xfer += oprot->writeFieldBegin("odom_x", ::apache::thrift::protocol::T_DOUBLE, 2);
-  xfer += oprot->writeDouble(this->odom_x);
-  xfer += oprot->writeFieldEnd();
-
-  xfer += oprot->writeFieldBegin("odom_y", ::apache::thrift::protocol::T_DOUBLE, 3);
-  xfer += oprot->writeDouble(this->odom_y);
-  xfer += oprot->writeFieldEnd();
-
-  xfer += oprot->writeFieldBegin("odom_th", ::apache::thrift::protocol::T_DOUBLE, 4);
-  xfer += oprot->writeDouble(this->odom_th);
+  xfer += oprot->writeFieldBegin("data", ::apache::thrift::protocol::T_STRUCT, 2);
+  xfer += this->data.write(oprot);
   xfer += oprot->writeFieldEnd();
 
   xfer += oprot->writeFieldStop();
@@ -118,16 +94,8 @@ uint32_t WithReturnService_resultReturn_pargs::write(::apache::thrift::protocol:
   xfer += oprot->writeString((*(this->img_)));
   xfer += oprot->writeFieldEnd();
 
-  xfer += oprot->writeFieldBegin("odom_x", ::apache::thrift::protocol::T_DOUBLE, 2);
-  xfer += oprot->writeDouble((*(this->odom_x)));
-  xfer += oprot->writeFieldEnd();
-
-  xfer += oprot->writeFieldBegin("odom_y", ::apache::thrift::protocol::T_DOUBLE, 3);
-  xfer += oprot->writeDouble((*(this->odom_y)));
-  xfer += oprot->writeFieldEnd();
-
-  xfer += oprot->writeFieldBegin("odom_th", ::apache::thrift::protocol::T_DOUBLE, 4);
-  xfer += oprot->writeDouble((*(this->odom_th)));
+  xfer += oprot->writeFieldBegin("data", ::apache::thrift::protocol::T_STRUCT, 2);
+  xfer += (*(this->data)).write(oprot);
   xfer += oprot->writeFieldEnd();
 
   xfer += oprot->writeFieldStop();
@@ -243,22 +211,20 @@ uint32_t WithReturnService_resultReturn_presult::read(::apache::thrift::protocol
   return xfer;
 }
 
-void WithReturnServiceClient::resultReturn(std::string& _return, const std::string& img_, const double odom_x, const double odom_y, const double odom_th)
+void WithReturnServiceClient::resultReturn(std::string& _return, const std::string& img_, const Data& data)
 {
-  send_resultReturn(img_, odom_x, odom_y, odom_th);
+  send_resultReturn(img_, data);
   recv_resultReturn(_return);
 }
 
-void WithReturnServiceClient::send_resultReturn(const std::string& img_, const double odom_x, const double odom_y, const double odom_th)
+void WithReturnServiceClient::send_resultReturn(const std::string& img_, const Data& data)
 {
   int32_t cseqid = 0;
   oprot_->writeMessageBegin("resultReturn", ::apache::thrift::protocol::T_CALL, cseqid);
 
   WithReturnService_resultReturn_pargs args;
   args.img_ = &img_;
-  args.odom_x = &odom_x;
-  args.odom_y = &odom_y;
-  args.odom_th = &odom_th;
+  args.data = &data;
   args.write(oprot_);
 
   oprot_->writeMessageEnd();
@@ -346,7 +312,7 @@ void WithReturnServiceProcessor::process_resultReturn(int32_t seqid, ::apache::t
 
   WithReturnService_resultReturn_result result;
   try {
-    iface_->resultReturn(result.success, args.img_, args.odom_x, args.odom_y, args.odom_th);
+    iface_->resultReturn(result.success, args.img_, args.data);
     result.__isset.success = true;
   } catch (const std::exception& e) {
     if (this->eventHandler_.get() != NULL) {
@@ -384,13 +350,13 @@ void WithReturnServiceProcessor::process_resultReturn(int32_t seqid, ::apache::t
   return processor;
 }
 
-void WithReturnServiceConcurrentClient::resultReturn(std::string& _return, const std::string& img_, const double odom_x, const double odom_y, const double odom_th)
+void WithReturnServiceConcurrentClient::resultReturn(std::string& _return, const std::string& img_, const Data& data)
 {
-  int32_t seqid = send_resultReturn(img_, odom_x, odom_y, odom_th);
+  int32_t seqid = send_resultReturn(img_, data);
   recv_resultReturn(_return, seqid);
 }
 
-int32_t WithReturnServiceConcurrentClient::send_resultReturn(const std::string& img_, const double odom_x, const double odom_y, const double odom_th)
+int32_t WithReturnServiceConcurrentClient::send_resultReturn(const std::string& img_, const Data& data)
 {
   int32_t cseqid = this->sync_.generateSeqId();
   ::apache::thrift::async::TConcurrentSendSentry sentry(&this->sync_);
@@ -398,9 +364,7 @@ int32_t WithReturnServiceConcurrentClient::send_resultReturn(const std::string& 
 
   WithReturnService_resultReturn_pargs args;
   args.img_ = &img_;
-  args.odom_x = &odom_x;
-  args.odom_y = &odom_y;
-  args.odom_th = &odom_th;
+  args.data = &data;
   args.write(oprot_);
 
   oprot_->writeMessageEnd();

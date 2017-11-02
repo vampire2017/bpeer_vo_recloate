@@ -24,16 +24,16 @@ public:
 
 	}
 
-	void resultReturn(std::string& _return, const std::string& img_, const double odom_x, const double odom_y, const double odom_th) {
+	void resultReturn(std::string& _return, const std::string& img_, const Data& data) {
 		// Your implementation goes here
 		std::vector<uchar> bytesImg( img_.begin(),img_.end());
 		cv::Mat curr_image = cv::imdecode( bytesImg, CV_LOAD_IMAGE_COLOR );
 		std::cout <<"********************start**********************"<<std::endl;
 
 		///input  baselink2odom_
-		voRelocate.baselink2odom_.x = odom_x;
-		voRelocate.baselink2odom_.y = odom_y;
-		voRelocate.baselink2odom_.th = odom_th;
+		voRelocate.baselink2odom_.x = data.x;
+		voRelocate.baselink2odom_.y = data.y;
+		voRelocate.baselink2odom_.th = data.th;
 		voRelocate.locateCb( curr_image, voRelocate.baselink2odom_ );
 
 		std::cout << "callback  out..  " << std::endl;
@@ -41,9 +41,9 @@ public:
 //		cv::imshow("img decode", curr_image);
 //		cv::waitKey(1);
 		printf("test-- odom: \n");
-		std::cout << "odom_x:" << odom_x
-		          << " odom_y:" << odom_y
-		          << " odom_th:" << odom_th << std::endl;
+		std::cout << "odom_x:" << data.x
+		          << " odom_y:" << data.y
+		          << " odom_th:" << data.th << std::endl;
 
 		_return = voRelocate.result_;  //return
 

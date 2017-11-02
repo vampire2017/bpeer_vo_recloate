@@ -20,6 +20,72 @@
 
 
 
+class Data;
+
+typedef struct _Data__isset {
+  _Data__isset() : ID(false), x(false), y(false), th(false) {}
+  bool ID :1;
+  bool x :1;
+  bool y :1;
+  bool th :1;
+} _Data__isset;
+
+class Data : public virtual ::apache::thrift::TBase {
+ public:
+
+  Data(const Data&);
+  Data& operator=(const Data&);
+  Data() : ID(0), x(0), y(0), th(0) {
+  }
+
+  virtual ~Data() throw();
+  int32_t ID;
+  double x;
+  double y;
+  double th;
+
+  _Data__isset __isset;
+
+  void __set_ID(const int32_t val);
+
+  void __set_x(const double val);
+
+  void __set_y(const double val);
+
+  void __set_th(const double val);
+
+  bool operator == (const Data & rhs) const
+  {
+    if (!(ID == rhs.ID))
+      return false;
+    if (!(x == rhs.x))
+      return false;
+    if (!(y == rhs.y))
+      return false;
+    if (!(th == rhs.th))
+      return false;
+    return true;
+  }
+  bool operator != (const Data &rhs) const {
+    return !(*this == rhs);
+  }
+
+  bool operator < (const Data & ) const;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+  virtual void printTo(std::ostream& out) const;
+};
+
+void swap(Data &a, Data &b);
+
+inline std::ostream& operator<<(std::ostream& out, const Data& obj)
+{
+  obj.printTo(out);
+  return out;
+}
+
 
 
 #endif

@@ -21,7 +21,7 @@
 class WithReturnServiceIf {
  public:
   virtual ~WithReturnServiceIf() {}
-  virtual void resultReturn(std::string& _return, const std::string& img_, const double odom_x, const double odom_y, const double odom_th) = 0;
+  virtual void resultReturn(std::string& _return, const std::string& img_, const Data& data) = 0;
 };
 
 class WithReturnServiceIfFactory {
@@ -51,17 +51,15 @@ class WithReturnServiceIfSingletonFactory : virtual public WithReturnServiceIfFa
 class WithReturnServiceNull : virtual public WithReturnServiceIf {
  public:
   virtual ~WithReturnServiceNull() {}
-  void resultReturn(std::string& /* _return */, const std::string& /* img_ */, const double /* odom_x */, const double /* odom_y */, const double /* odom_th */) {
+  void resultReturn(std::string& /* _return */, const std::string& /* img_ */, const Data& /* data */) {
     return;
   }
 };
 
 typedef struct _WithReturnService_resultReturn_args__isset {
-  _WithReturnService_resultReturn_args__isset() : img_(false), odom_x(false), odom_y(false), odom_th(false) {}
+  _WithReturnService_resultReturn_args__isset() : img_(false), data(false) {}
   bool img_ :1;
-  bool odom_x :1;
-  bool odom_y :1;
-  bool odom_th :1;
+  bool data :1;
 } _WithReturnService_resultReturn_args__isset;
 
 class WithReturnService_resultReturn_args {
@@ -69,34 +67,24 @@ class WithReturnService_resultReturn_args {
 
   WithReturnService_resultReturn_args(const WithReturnService_resultReturn_args&);
   WithReturnService_resultReturn_args& operator=(const WithReturnService_resultReturn_args&);
-  WithReturnService_resultReturn_args() : img_(), odom_x(0), odom_y(0), odom_th(0) {
+  WithReturnService_resultReturn_args() : img_() {
   }
 
   virtual ~WithReturnService_resultReturn_args() throw();
   std::string img_;
-  double odom_x;
-  double odom_y;
-  double odom_th;
+  Data data;
 
   _WithReturnService_resultReturn_args__isset __isset;
 
   void __set_img_(const std::string& val);
 
-  void __set_odom_x(const double val);
-
-  void __set_odom_y(const double val);
-
-  void __set_odom_th(const double val);
+  void __set_data(const Data& val);
 
   bool operator == (const WithReturnService_resultReturn_args & rhs) const
   {
     if (!(img_ == rhs.img_))
       return false;
-    if (!(odom_x == rhs.odom_x))
-      return false;
-    if (!(odom_y == rhs.odom_y))
-      return false;
-    if (!(odom_th == rhs.odom_th))
+    if (!(data == rhs.data))
       return false;
     return true;
   }
@@ -118,9 +106,7 @@ class WithReturnService_resultReturn_pargs {
 
   virtual ~WithReturnService_resultReturn_pargs() throw();
   const std::string* img_;
-  const double* odom_x;
-  const double* odom_y;
-  const double* odom_th;
+  const Data* data;
 
   uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
 
@@ -206,8 +192,8 @@ class WithReturnServiceClient : virtual public WithReturnServiceIf {
   boost::shared_ptr< ::apache::thrift::protocol::TProtocol> getOutputProtocol() {
     return poprot_;
   }
-  void resultReturn(std::string& _return, const std::string& img_, const double odom_x, const double odom_y, const double odom_th);
-  void send_resultReturn(const std::string& img_, const double odom_x, const double odom_y, const double odom_th);
+  void resultReturn(std::string& _return, const std::string& img_, const Data& data);
+  void send_resultReturn(const std::string& img_, const Data& data);
   void recv_resultReturn(std::string& _return);
  protected:
   boost::shared_ptr< ::apache::thrift::protocol::TProtocol> piprot_;
@@ -257,13 +243,13 @@ class WithReturnServiceMultiface : virtual public WithReturnServiceIf {
     ifaces_.push_back(iface);
   }
  public:
-  void resultReturn(std::string& _return, const std::string& img_, const double odom_x, const double odom_y, const double odom_th) {
+  void resultReturn(std::string& _return, const std::string& img_, const Data& data) {
     size_t sz = ifaces_.size();
     size_t i = 0;
     for (; i < (sz - 1); ++i) {
-      ifaces_[i]->resultReturn(_return, img_, odom_x, odom_y, odom_th);
+      ifaces_[i]->resultReturn(_return, img_, data);
     }
-    ifaces_[i]->resultReturn(_return, img_, odom_x, odom_y, odom_th);
+    ifaces_[i]->resultReturn(_return, img_, data);
     return;
   }
 
@@ -297,8 +283,8 @@ class WithReturnServiceConcurrentClient : virtual public WithReturnServiceIf {
   boost::shared_ptr< ::apache::thrift::protocol::TProtocol> getOutputProtocol() {
     return poprot_;
   }
-  void resultReturn(std::string& _return, const std::string& img_, const double odom_x, const double odom_y, const double odom_th);
-  int32_t send_resultReturn(const std::string& img_, const double odom_x, const double odom_y, const double odom_th);
+  void resultReturn(std::string& _return, const std::string& img_, const Data& data);
+  int32_t send_resultReturn(const std::string& img_, const Data& data);
   void recv_resultReturn(std::string& _return, const int32_t seqid);
  protected:
   boost::shared_ptr< ::apache::thrift::protocol::TProtocol> piprot_;
