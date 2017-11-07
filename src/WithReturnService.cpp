@@ -43,6 +43,14 @@ uint32_t WithReturnService_resultReturn_args::read(::apache::thrift::protocol::T
         }
         break;
       case 2:
+        if (ftype == ::apache::thrift::protocol::T_STRING) {
+          xfer += iprot->readString(this->ID_);
+          this->__isset.ID_ = true;
+        } else {
+          xfer += iprot->skip(ftype);
+        }
+        break;
+      case 3:
         if (ftype == ::apache::thrift::protocol::T_STRUCT) {
           xfer += this->data.read(iprot);
           this->__isset.data = true;
@@ -71,7 +79,11 @@ uint32_t WithReturnService_resultReturn_args::write(::apache::thrift::protocol::
   xfer += oprot->writeString(this->img_);
   xfer += oprot->writeFieldEnd();
 
-  xfer += oprot->writeFieldBegin("data", ::apache::thrift::protocol::T_STRUCT, 2);
+  xfer += oprot->writeFieldBegin("ID_", ::apache::thrift::protocol::T_STRING, 2);
+  xfer += oprot->writeString(this->ID_);
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("data", ::apache::thrift::protocol::T_STRUCT, 3);
   xfer += this->data.write(oprot);
   xfer += oprot->writeFieldEnd();
 
@@ -94,7 +106,11 @@ uint32_t WithReturnService_resultReturn_pargs::write(::apache::thrift::protocol:
   xfer += oprot->writeString((*(this->img_)));
   xfer += oprot->writeFieldEnd();
 
-  xfer += oprot->writeFieldBegin("data", ::apache::thrift::protocol::T_STRUCT, 2);
+  xfer += oprot->writeFieldBegin("ID_", ::apache::thrift::protocol::T_STRING, 2);
+  xfer += oprot->writeString((*(this->ID_)));
+  xfer += oprot->writeFieldEnd();
+
+  xfer += oprot->writeFieldBegin("data", ::apache::thrift::protocol::T_STRUCT, 3);
   xfer += (*(this->data)).write(oprot);
   xfer += oprot->writeFieldEnd();
 
@@ -211,19 +227,20 @@ uint32_t WithReturnService_resultReturn_presult::read(::apache::thrift::protocol
   return xfer;
 }
 
-void WithReturnServiceClient::resultReturn(std::string& _return, const std::string& img_, const Data& data)
+void WithReturnServiceClient::resultReturn(std::string& _return, const std::string& img_, const std::string& ID_, const Data& data)
 {
-  send_resultReturn(img_, data);
+  send_resultReturn(img_, ID_, data);
   recv_resultReturn(_return);
 }
 
-void WithReturnServiceClient::send_resultReturn(const std::string& img_, const Data& data)
+void WithReturnServiceClient::send_resultReturn(const std::string& img_, const std::string& ID_, const Data& data)
 {
   int32_t cseqid = 0;
   oprot_->writeMessageBegin("resultReturn", ::apache::thrift::protocol::T_CALL, cseqid);
 
   WithReturnService_resultReturn_pargs args;
   args.img_ = &img_;
+  args.ID_ = &ID_;
   args.data = &data;
   args.write(oprot_);
 
@@ -312,7 +329,7 @@ void WithReturnServiceProcessor::process_resultReturn(int32_t seqid, ::apache::t
 
   WithReturnService_resultReturn_result result;
   try {
-    iface_->resultReturn(result.success, args.img_, args.data);
+    iface_->resultReturn(result.success, args.img_, args.ID_, args.data);
     result.__isset.success = true;
   } catch (const std::exception& e) {
     if (this->eventHandler_.get() != NULL) {
@@ -350,13 +367,13 @@ void WithReturnServiceProcessor::process_resultReturn(int32_t seqid, ::apache::t
   return processor;
 }
 
-void WithReturnServiceConcurrentClient::resultReturn(std::string& _return, const std::string& img_, const Data& data)
+void WithReturnServiceConcurrentClient::resultReturn(std::string& _return, const std::string& img_, const std::string& ID_, const Data& data)
 {
-  int32_t seqid = send_resultReturn(img_, data);
+  int32_t seqid = send_resultReturn(img_, ID_, data);
   recv_resultReturn(_return, seqid);
 }
 
-int32_t WithReturnServiceConcurrentClient::send_resultReturn(const std::string& img_, const Data& data)
+int32_t WithReturnServiceConcurrentClient::send_resultReturn(const std::string& img_, const std::string& ID_, const Data& data)
 {
   int32_t cseqid = this->sync_.generateSeqId();
   ::apache::thrift::async::TConcurrentSendSentry sentry(&this->sync_);
@@ -364,6 +381,7 @@ int32_t WithReturnServiceConcurrentClient::send_resultReturn(const std::string& 
 
   WithReturnService_resultReturn_pargs args;
   args.img_ = &img_;
+  args.ID_ = &ID_;
   args.data = &data;
   args.write(oprot_);
 

@@ -18,10 +18,6 @@ Data::~Data() throw() {
 }
 
 
-void Data::__set_ID(const int32_t val) {
-  this->ID = val;
-}
-
 void Data::__set_x(const double val) {
   this->x = val;
 }
@@ -55,14 +51,6 @@ uint32_t Data::read(::apache::thrift::protocol::TProtocol* iprot) {
     }
     switch (fid)
     {
-      case 2:
-        if (ftype == ::apache::thrift::protocol::T_I32) {
-          xfer += iprot->readI32(this->ID);
-          this->__isset.ID = true;
-        } else {
-          xfer += iprot->skip(ftype);
-        }
-        break;
       case 3:
         if (ftype == ::apache::thrift::protocol::T_DOUBLE) {
           xfer += iprot->readDouble(this->x);
@@ -104,10 +92,6 @@ uint32_t Data::write(::apache::thrift::protocol::TProtocol* oprot) const {
   apache::thrift::protocol::TOutputRecursionTracker tracker(*oprot);
   xfer += oprot->writeStructBegin("Data");
 
-  xfer += oprot->writeFieldBegin("ID", ::apache::thrift::protocol::T_I32, 2);
-  xfer += oprot->writeI32(this->ID);
-  xfer += oprot->writeFieldEnd();
-
   xfer += oprot->writeFieldBegin("x", ::apache::thrift::protocol::T_DOUBLE, 3);
   xfer += oprot->writeDouble(this->x);
   xfer += oprot->writeFieldEnd();
@@ -127,7 +111,6 @@ uint32_t Data::write(::apache::thrift::protocol::TProtocol* oprot) const {
 
 void swap(Data &a, Data &b) {
   using ::std::swap;
-  swap(a.ID, b.ID);
   swap(a.x, b.x);
   swap(a.y, b.y);
   swap(a.th, b.th);
@@ -135,14 +118,12 @@ void swap(Data &a, Data &b) {
 }
 
 Data::Data(const Data& other0) {
-  ID = other0.ID;
   x = other0.x;
   y = other0.y;
   th = other0.th;
   __isset = other0.__isset;
 }
 Data& Data::operator=(const Data& other1) {
-  ID = other1.ID;
   x = other1.x;
   y = other1.y;
   th = other1.th;
@@ -152,8 +133,7 @@ Data& Data::operator=(const Data& other1) {
 void Data::printTo(std::ostream& out) const {
   using ::apache::thrift::to_string;
   out << "Data(";
-  out << "ID=" << to_string(ID);
-  out << ", " << "x=" << to_string(x);
+  out << "x=" << to_string(x);
   out << ", " << "y=" << to_string(y);
   out << ", " << "th=" << to_string(th);
   out << ")";
