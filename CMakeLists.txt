@@ -14,21 +14,21 @@ set( THRIFT_LIBS "/usr/local/lib/libthrift-0.10.0.so" )
 set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ./../bin )
 
 ###########---create_database---#############
-add_executable( create_database
-        src/create_database_main.cpp
-        src/create_database.cpp
-        src/cJSON.c
-
-        src/test_constants.cpp
-        src/TestService.cpp
-        src/test_types.cpp
-        )
-
-target_link_libraries( create_database
-        ${OpenCV_LIBS}
-        ${DBoW3_LIBS}
-        ${THRIFT_LIBS}
-        )
+#add_executable( create_database
+#        src/create_database_main.cpp
+#        src/create_database.cpp
+#        src/cJSON.c
+#
+#        src/test_constants.cpp
+#        src/TestService.cpp
+#        src/test_types.cpp
+#        )
+#
+#target_link_libraries( create_database
+#        ${OpenCV_LIBS}
+#        ${DBoW3_LIBS}
+#        ${THRIFT_LIBS}
+#        )
 ##############################################
 
 ###########---ve_relocate---#############
@@ -51,21 +51,21 @@ target_link_libraries( vo_relocate
 
 
 ###########---update_database---#############
-add_executable( update_database
-        src/update_database_main.cpp
-        src/update_database.cpp
-        src/cJSON.c
-
-        src/updateDatabase_constants.cpp
-        src/UpdateService.cpp
-        src/updateDatabase_types.cpp
-        )
-
-target_link_libraries( update_database
-        ${OpenCV_LIBS}
-        ${DBoW3_LIBS}
-        ${THRIFT_LIBS}
-        )
+#add_executable( update_database
+#        src/update_database_main.cpp
+#        src/update_database.cpp
+#        src/cJSON.c
+#
+#        src/updateDatabase_constants.cpp
+#        src/UpdateService.cpp
+#        src/updateDatabase_types.cpp
+#        )
+#
+#target_link_libraries( update_database
+#        ${OpenCV_LIBS}
+#        ${DBoW3_LIBS}
+#        ${THRIFT_LIBS}
+#        )
 ##############################################
 
 #install( TARGETS create_database RUNTIME DESTINATION bin )

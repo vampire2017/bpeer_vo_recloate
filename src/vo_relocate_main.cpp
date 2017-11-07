@@ -6,7 +6,7 @@
 #include <thrift/server/TSimpleServer.h>
 #include <thrift/transport/TServerSocket.h>
 #include <thrift/transport/TBufferTransports.h>
-
+#include <boost/timer.hpp>
 #include "vo_relocate.h"
 
 using namespace ::apache::thrift;
@@ -20,13 +20,27 @@ class WithReturnServiceHandler : virtual public WithReturnServiceIf {
 public:
 	WithReturnServiceHandler():voRelocate(1) {
 		// Your initialization goes here
+		boost::timer t1;
+		// TODO 加载所有的数据库
+		// TODO load file change;
 		voRelocate.load_file( "/home/bpeer/catkin_ws/src/bpeer_sj/database/test_id_locate.txt" );
+		std::cout << "load_file time: " << t1.elapsed() << std::endl;
+
+		boost::timer t2;
+		voRelocate.db_robot1.load( "/home/bpeer/catkin_ws/src/bpeer_sj/database/database_test.db" );
+		std::cout << "加载数据库耗时：" << t2.elapsed() << std::endl;
 
 	}
 
 	void resultReturn(std::string& _return, const std::string& img_, const std::string& ID_, const Data& data)
 	{
 		// TODO need to decide robotID
+		if ( ID_ == "robot1" )
+		{
+			voRelocate.db = voRelocate.db_robot1;
+
+		}
+
 		// Your implementation goes here
 		std::vector<uchar> bytesImg( img_.begin(),img_.end());
 		cv::Mat curr_image = cv::imdecode( bytesImg, CV_LOAD_IMAGE_COLOR );
@@ -47,6 +61,7 @@ public:
 		          << " odom_y:" << data.y
 		          << " odom_th:" << data.th << std::endl;
 
+		// TODO return 需要非法判断
 		_return = voRelocate.result_;  //return
 
 		std::cout << "res....: " << voRelocate.result_ << std::endl;
@@ -56,10 +71,11 @@ public:
 
 public:
 	VoRelocate voRelocate;
+	bool flag1_load_;
 };
 
 int main(int argc, char **argv) {
-	int port = 9080;
+	int port = 10086;
 	shared_ptr<WithReturnServiceHandler> handler(new WithReturnServiceHandler());
 	shared_ptr<TProcessor> processor(new WithReturnServiceProcessor(handler));
 	shared_ptr<TServerTransport> serverTransport(new TServerSocket(port));
@@ -68,6 +84,7 @@ int main(int argc, char **argv) {
 
 	TSimpleServer server(processor, serverTransport, transportFactory, protocolFactory);
 	server.serve();
+
 	return 0;
 }
 

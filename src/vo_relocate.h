@@ -41,10 +41,12 @@ public:
 	pose2D baselink2odom_;
 
 	std::string result_;
+	DBoW3::Database db;
+	DBoW3::Database db_robot1;
+
 private:
 	bool relocate();
 
-	DBoW3::Database db;
 	std::map<int, pose2D> map_pose;  //robot pose in img for reloc
 
 	int index;

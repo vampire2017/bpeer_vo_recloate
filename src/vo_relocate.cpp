@@ -2,12 +2,12 @@
 
 VoRelocate::VoRelocate( const int i )
 {
-	std::chrono::steady_clock::time_point t100 = std::chrono::steady_clock::now();
-	db.load( "/home/bpeer/catkin_ws/src/bpeer_sj/database/database_test.db" );
-
-	std::chrono::steady_clock::time_point t101 = std::chrono::steady_clock::now();
-	std::chrono::duration<double > time_used = std::chrono::duration_cast< std::chrono::duration<double > >( t101-t100 );
-	std::cout << "加载数据库耗时：" << time_used.count() << std::endl;
+//	std::chrono::steady_clock::time_point t100 = std::chrono::steady_clock::now();
+//	db.load( "/home/bpeer/catkin_ws/src/bpeer_sj/database/database_test.db" );
+//
+//	std::chrono::steady_clock::time_point t101 = std::chrono::steady_clock::now();
+//	std::chrono::duration<double > time_used = std::chrono::duration_cast< std::chrono::duration<double > >( t101-t100 );
+//	std::cout << "加载数据库耗时：" << time_used.count() << std::endl;
 
 	index = 0;
 	common_threa = 0;
