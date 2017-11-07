@@ -20,15 +20,10 @@ class WithReturnServiceHandler : virtual public WithReturnServiceIf {
 public:
 	WithReturnServiceHandler():voRelocate(1) {
 		// Your initialization goes here
-		boost::timer t1;
 		// TODO 加载所有的数据库
-		// TODO load file change;
-		voRelocate.load_file( "/home/bpeer/catkin_ws/src/bpeer_sj/database/test_id_locate.txt" );
-		std::cout << "load_file time: " << t1.elapsed() << std::endl;
-
-		boost::timer t2;
+		boost::timer t1;
 		voRelocate.db_robot1.load( "/home/bpeer/catkin_ws/src/bpeer_sj/database/database_test.db" );
-		std::cout << "加载数据库耗时：" << t2.elapsed() << std::endl;
+		std::cout << "加载数据库耗时：" << t1.elapsed() << std::endl;
 
 	}
 
@@ -38,7 +33,10 @@ public:
 		if ( ID_ == "robot1" )
 		{
 			voRelocate.db = voRelocate.db_robot1;
-
+			boost::timer t1;
+			voRelocate.load_file( "/home/bpeer/catkin_ws/src/bpeer_sj/database/test_id_locate.txt" );
+			std::cout << "load_file time: " << t1.elapsed() << std::endl;
+			// load_file time: 0.000815
 		}
 
 		// Your implementation goes here
