@@ -26,7 +26,7 @@ public:
 
 	void resultReturn(std::string& _return, const std::string& img_, const std::string& ID_, const Data& data)
 	{
-		// TODO need to decide robotID in here;
+		// TODO need to decide robotID
 		// Your implementation goes here
 		std::vector<uchar> bytesImg( img_.begin(),img_.end());
 		cv::Mat curr_image = cv::imdecode( bytesImg, CV_LOAD_IMAGE_COLOR );
