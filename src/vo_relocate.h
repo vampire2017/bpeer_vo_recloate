@@ -40,6 +40,8 @@ public:
 	void locateCb( Mat& image, pose2D odom );
 	pose2D baselink2odom_;
 
+	void reset();
+
 	std::string result_;
 	DBoW3::Database db;
 	DBoW3::Database db_robot1;

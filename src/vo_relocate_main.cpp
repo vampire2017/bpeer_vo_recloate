@@ -3,6 +3,7 @@
 
 #include "WithReturnService.h"
 #include <thrift/protocol/TBinaryProtocol.h>
+#include <thrift/protocol/TCompactProtocol.h>
 #include <thrift/server/TSimpleServer.h>
 #include <thrift/transport/TServerSocket.h>
 #include <thrift/transport/TBufferTransports.h>
@@ -25,18 +26,24 @@ public:
 		voRelocate.db_robot1.load( "/home/bpeer/catkin_ws/src/bpeer_sj/database/database_test.db" );
 		std::cout << "加载数据库耗时：" << t1.elapsed() << std::endl;
 
+		flag1_load_ == false;
 	}
 
 	void resultReturn(std::string& _return, const std::string& img_, const std::string& ID_, const Data& data)
 	{
 		// TODO need to decide robotID
-		if ( ID_ == "robot1" )
+		if ( !flag1_load_ && ID_ == "robot1" )
 		{
 			voRelocate.db = voRelocate.db_robot1;
+
+			// todo clear
+			voRelocate.reset();
+
 			boost::timer t1;
 			voRelocate.load_file( "/home/bpeer/catkin_ws/src/bpeer_sj/database/test_id_locate.txt" );
 			std::cout << "load_file time: " << t1.elapsed() << std::endl;
 			// load_file time: 0.000815
+			flag1_load_ = true;
 		}
 
 		// Your implementation goes here
@@ -60,7 +67,10 @@ public:
 		          << " odom_th:" << data.th << std::endl;
 
 		// TODO return 需要非法判断
-		_return = voRelocate.result_;  //return
+		if ( voRelocate.result_ == NULL )
+			_return = "waiting relocating..";
+		else
+			_return = voRelocate.result_;  //return
 
 		std::cout << "res....: " << voRelocate.result_ << std::endl;
 		voRelocate.result_.clear();  //清空上次值
@@ -78,7 +88,7 @@ int main(int argc, char **argv) {
 	shared_ptr<TProcessor> processor(new WithReturnServiceProcessor(handler));
 	shared_ptr<TServerTransport> serverTransport(new TServerSocket(port));
 	shared_ptr<TTransportFactory> transportFactory(new TBufferedTransportFactory());
-	shared_ptr<TProtocolFactory> protocolFactory(new TBinaryProtocolFactory());
+	shared_ptr<TProtocolFactory> protocolFactory(new TCompactProtocolFactory());
 
 	TSimpleServer server(processor, serverTransport, transportFactory, protocolFactory);
 	server.serve();

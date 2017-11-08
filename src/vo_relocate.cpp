@@ -18,6 +18,32 @@ VoRelocate::VoRelocate( const int i )
 	err_angular = 0.1;
 
 	test_num = 1;  //test
+
+	img = cv::Mat();
+	ref_img = cv::Mat();
+
+}
+
+void VoRelocate::reset()
+{
+	result_.clear();
+	map_pose.clear();
+	results.clear();
+	result.map_result.clear();
+
+//	todo VoRelocate(1);
+	index = 0;
+	common_threa = 0;
+	motion_thre = 0.02;  //@todo   test value = -0.02; right value :0.02
+	new_flag = 0;
+	relocate_success =0;
+	err_linear = 0.2;
+	err_angular = 0.1;
+
+	test_num = 1;  //test
+
+	img = cv::Mat();
+	ref_img = cv::Mat();
 }
 
 void VoRelocate::locateCb(Mat &image, pose2D odom)
