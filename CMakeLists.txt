@@ -33,13 +33,13 @@ set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ./../bin )
 
 ###########---ve_relocate---#############
 add_executable( vo_relocate
-        src/vo_relocate_main.cpp
-        src/vo_relocate.cpp
-        src/cJSON.c
+        src/relocate/vo_relocate_main.cpp
+        src/relocate/vo_relocate.cpp
+        src/common/cJSON.c
 
-        src/withReturn_constants.cpp
-        src/WithReturnService.cpp
-        src/withReturn_types.cpp
+        src/relocate/withReturn_constants.cpp
+        src/relocate/WithReturnService.cpp
+        src/relocate/withReturn_types.cpp
         )
 
 target_link_libraries( vo_relocate
