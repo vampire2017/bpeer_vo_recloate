@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/src/common/cJSON.c
+string.h
+-
+stdio.h
+-
+math.h
+-
+stdlib.h
+-
+float.h
+-
+limits.h
+-
+ctype.h
+-
+locale.h
+-
+cJSON.h
+/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/src/common/cJSON.h
+
+/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/src/common/cJSON.h
+stddef.h
+-
+

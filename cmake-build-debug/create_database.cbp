@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="create_database"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\opt\;CMake Files\..\..\..\..\..\..\opt\ros\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\OpenCV-3.2.0-dev\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="vo_relocate">
+				<Option output="/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/bin/vo_relocate" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="./../bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include/thrift"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.2.0-dev"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/cmake-build-debug/Makefile&quot;  VERBOSE=1 vo_relocate"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="vo_relocate/fast">
+				<Option output="/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/bin/vo_relocate" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="./../bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include/thrift"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.2.0-dev"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/cmake-build-debug/Makefile&quot;  VERBOSE=1 vo_relocate/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/src/common/cJSON.c">
+			<Option target="vo_relocate"/>
+		</Unit>
+		<Unit filename="/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/src/common/cJSON.h">
+			<Option target="vo_relocate"/>
+		</Unit>
+		<Unit filename="/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/src/relocate/WithReturnService.cpp">
+			<Option target="vo_relocate"/>
+		</Unit>
+		<Unit filename="/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/src/relocate/WithReturnService.h">
+			<Option target="vo_relocate"/>
+		</Unit>
+		<Unit filename="/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/src/relocate/vo_relocate.cpp">
+			<Option target="vo_relocate"/>
+		</Unit>
+		<Unit filename="/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/src/relocate/vo_relocate.h">
+			<Option target="vo_relocate"/>
+		</Unit>
+		<Unit filename="/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/src/relocate/vo_relocate_main.cpp">
+			<Option target="vo_relocate"/>
+		</Unit>
+		<Unit filename="/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/src/relocate/withReturn_constants.cpp">
+			<Option target="vo_relocate"/>
+		</Unit>
+		<Unit filename="/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/src/relocate/withReturn_constants.h">
+			<Option target="vo_relocate"/>
+		</Unit>
+		<Unit filename="/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/src/relocate/withReturn_types.cpp">
+			<Option target="vo_relocate"/>
+		</Unit>
+		<Unit filename="/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/src/relocate/withReturn_types.h">
+			<Option target="vo_relocate"/>
+		</Unit>
+		<Unit filename="/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/../../../../../../opt/ros/kinetic/share/OpenCV-3.2.0-dev/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\OpenCV-3.2.0-dev\"/>
+		</Unit>
+		<Unit filename="/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/../../../../../../opt/ros/kinetic/share/OpenCV-3.2.0-dev/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\OpenCV-3.2.0-dev\"/>
+		</Unit>
+		<Unit filename="/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/../../../../../../opt/ros/kinetic/share/OpenCV-3.2.0-dev/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\OpenCV-3.2.0-dev\"/>
+		</Unit>
+		<Unit filename="/home/bpeer/catkin_ws/src/bpeer_sj/bpeer_vo_recloate/../../../../../../opt/ros/kinetic/share/OpenCV-3.2.0-dev/OpenCVModules-none.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\OpenCV-3.2.0-dev\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
