@@ -32,7 +32,7 @@ public:
 	void resultReturn(std::string& _return, const std::string& img_, const std::string& ID_, const Data& data)
 	{
 		// TODO need to decide robotID
-		if ( !flag1_load_ && ID_ == "robot1" )
+		if ( !flag1_load_ && ID_ == "myhid" )
 		{
 			voRelocate.db = voRelocate.db_robot1;
 
