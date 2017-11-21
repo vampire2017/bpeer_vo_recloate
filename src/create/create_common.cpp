@@ -11,9 +11,9 @@ msaveData(1), mclientHbaseOperate(1)
 	port = 9090;
 
 	// robot id argv
-	sprintf( vocab_path, "/home/bpeer/catkin_ws/src/bpeer_sj/database/%s_Vocabulary_test.bin", argv[1] );
-	sprintf( db_path, "/home/bpeer/catkin_ws/src/bpeer_sj/database/%s_database_test.db", argv[1] );
-	sprintf( img_pose_db_path, "/home/bpeer/catkin_ws/src/bpeer_sj/database/%s_test_id_locate.txt", argv[1] );
+	sprintf( vocab_path, "/home/bpeer/catkin_ws/src/bpeer_sj/database/%s_Vocabulary.bin", argv[1] );
+	sprintf( db_path, "/home/bpeer/catkin_ws/src/bpeer_sj/database/%s_database.db", argv[1] );
+	sprintf( img_pose_db_path, "/home/bpeer/catkin_ws/src/bpeer_sj/database/%s_id_locate.txt", argv[1] );
 
 	table_name = "relocate_database";
 	Text tmp_key = argv[1];
