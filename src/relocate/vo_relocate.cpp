@@ -75,6 +75,7 @@ void VoRelocate::locateCb(Mat &image, pose2D odom)
 			ref_img = img.clone();
 			ref_locate = locate;
 
+			std::cout << "re_flag : " << std::endl;
 			//匹配成功
 			if(re_flag)
 			{

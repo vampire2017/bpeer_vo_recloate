@@ -27,17 +27,18 @@ public:
 		std::cout << "加载数据库耗时：" << t1.elapsed() << std::endl;
 
 		flag1_load_ == false;
+//		test_img = 0;  // test
 	}
 
 	void resultReturn(std::string& _return, const std::string& img_, const std::string& ID_, const Data& data)
 	{
+		std::cout << "id: " << ID_ << std::endl;
 		// TODO need to decide robotID
 		if ( !flag1_load_ && ID_ == "myhid" )
 		{
-			voRelocate.db = voRelocate.db_robot1;
-
 			// todo clear
 			voRelocate.reset();
+			voRelocate.db = voRelocate.db_robot1;
 
 			boost::timer t1;
 			voRelocate.load_file( "/home/bpeer/catkin_ws/src/bpeer_sj/database/test_id_locate.txt" );
@@ -49,7 +50,11 @@ public:
 		// Your implementation goes here
 		std::vector<uchar> bytesImg( img_.begin(),img_.end());
 		cv::Mat curr_image = cv::imdecode( bytesImg, CV_LOAD_IMAGE_COLOR );
-		std::cout <<"********************start**********************"<<std::endl;
+		std::cout <<"***********start***********"<<std::endl;
+
+//		char im_jpg[128];
+//		sprintf(im_jpg, "%d.jpg", test_img++);
+//		cv::imwrite(im_jpg, curr_image);   //  将image图像保存.jpg
 
 		///input  baselink2odom_
 		voRelocate.baselink2odom_.x = data.x;
@@ -74,12 +79,14 @@ public:
 
 		std::cout << "res....: " << voRelocate.result_ << std::endl;
 		voRelocate.result_.clear();  //清空上次值
-		std::cout <<"*********************end*******************"<<std::endl;
+		std::cout <<"***********end***********"<<std::endl;
 	}
 
 public:
 	VoRelocate voRelocate;
 	bool flag1_load_;
+
+//	int test_img; //test
 };
 
 int main(int argc, char **argv) {
