@@ -21,7 +21,9 @@
 ClientHbaseOperate::ClientHbaseOperate( const int i ):
 socket( (TSocket*)NULL ), transport((TBufferedTransport*)NULL), protocol((TBinaryProtocol*)NULL),
 mnHbaseServicePort_(9090), mbIsConnected_(false)
-{}
+{
+	std::cout << "ClientHbaseOperate init: " << i << std::endl;
+}
 
 
 ClientHbaseOperate::~ClientHbaseOperate()
