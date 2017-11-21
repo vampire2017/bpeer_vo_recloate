@@ -18,7 +18,7 @@ SaveData::SaveData(const int i)
 	motion_thre = 0.02;  //@todo -0.02  to test;  right value is 0.02
 	detector_ = ORB::create();
 	idImage = 0;
-	std::cout << "init: " << i << std::endl;
+	std::cout << "SaveData init: " << i << std::endl;
 }
 
 void SaveData::saveCb(Mat &image, pose2D odom)
