@@ -42,13 +42,13 @@ void UpdateData::load_file(const std::string &filename)
 	index = 0; //@todo to save new data;;;
 }
 
-void UpdateData::updateCb(Mat &image, pose2D odom)
+void UpdateData::updateCb(Mat &image, pose2D g_pose)
 {
 	std::cout << "update in.. " << std::endl;
 	float tmp_motion = 0;
 	motion_value = 999;
 
-	locate = odom;
+	locate = g_pose;
 
 	//@todo 时间戳直接client传输过来的时候,此处可以不用
 	locate.stamp = internalTimer::Timer::now().ToDAY();
@@ -74,7 +74,7 @@ void UpdateData::updateCb(Mat &image, pose2D odom)
 		}
 	}
 
-	std::cout << "新增数据集的大小：" << map_pose_new.size() << std::endl;
+	std::cout << "新增数据的大小：" << map_pose_new.size() << std::endl;
 
 }
 

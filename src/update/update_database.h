@@ -32,7 +32,7 @@ public:
 	UpdateData( const int i );
 	DBoW3::Database db;
 
-	void updateCb( Mat& image, pose2D odom );
+	void updateCb( Mat& image, pose2D g_pose );
 	void load_file( const std::string &filename );
 	void save_file( const std::string &filename ) const;
 

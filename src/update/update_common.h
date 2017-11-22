@@ -23,6 +23,7 @@ public:
 
 public:
 	ClientHbaseOperate mclientHbaseOperate;
+	UpdateData mupdateData;
 
 	std::vector<TRowResult> rowResult;
 	Text table_name;
@@ -33,6 +34,8 @@ private:
 	Text host;
 	int port;
 
+	char db_path[128];
+	char img_pose_db_path[128];
 };
 
 #endif //VO_RELOCATE_UPDATE_COMMON_H
