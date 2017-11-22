@@ -54,21 +54,24 @@ target_link_libraries( vo_relocate
 
 
 ###########---update_database---#############
-#add_executable( update_database
-#        src/update_database_main.cpp
-#        src/update_database.cpp
-#        src/cJSON.c
-#
-#        src/updateDatabase_constants.cpp
-#        src/UpdateService.cpp
-#        src/updateDatabase_types.cpp
-#        )
-#
-#target_link_libraries( update_database
-#        ${OpenCV_LIBS}
-#        ${DBoW3_LIBS}
-#        ${THRIFT_LIBS}
-#        )
+add_executable( update_database_hbase
+        src/update/hbase_update_database_main.cpp
+        src/update/update_database.cpp
+        src/update/update_common.cpp
+
+        src/common/HbaseOperate.cpp
+        src/common/cJSON.c
+
+        src/common/Hbase.cpp
+        src/common/Hbase_constants.cpp
+        src/common/Hbase_types.cpp
+        )
+
+target_link_libraries( update_database_hbase
+        ${OpenCV_LIBS}
+        ${DBoW3_LIBS}
+        ${THRIFT_LIBS}
+        )
 ##############################################
 
 ##################################
