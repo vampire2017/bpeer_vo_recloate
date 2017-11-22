@@ -33,7 +33,7 @@ public:
 
 	DBoW3::Database db;
 	void save_file( const std::string &filename ) const;
-	void saveCb( Mat& image, pose2D odom );
+	void saveCb( Mat& image, pose2D g_pose );
 
 public:
 	void saveImage( const Mat& image );

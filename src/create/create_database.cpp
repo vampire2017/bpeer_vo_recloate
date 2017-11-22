@@ -21,7 +21,7 @@ SaveData::SaveData(const int i)
 	std::cout << "SaveData init: " << i << std::endl;
 }
 
-void SaveData::saveCb(Mat &image, pose2D odom)
+void SaveData::saveCb(Mat &image, pose2D g_pose)
 {
 	std::cout << "image  in..  " << std::endl;
 	float tmp_motion = 0;
@@ -29,7 +29,7 @@ void SaveData::saveCb(Mat &image, pose2D odom)
 
 //	internalTimer::Timer::now().ToDAY();
 
-	locate = odom;
+	locate = g_pose;
 	locate.stamp = internalTimer::Timer::now().ToDAY();
 
 	if( map_pose.empty() )

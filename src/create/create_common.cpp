@@ -2,6 +2,7 @@
  * brief: come on
  * author: Created by bpeer on 17-11-21.
  */
+
 #include "create_common.h"
 
 CreateCommon::CreateCommon( char** argv ):
@@ -10,8 +11,8 @@ msaveData(1), mclientHbaseOperate(1)
 	host = "q5";
 	port = 9090;
 
-	// robot id argv
-	sprintf( vocab_path, "/home/bpeer/catkin_ws/src/bpeer_sj/database/%s_Vocabulary.bin", argv[1] );
+	// robot id argv => vocab need to train
+	vocab_path = "/home/bpeer/catkin_ws/src/bpeer_sj/database/bpeer_Vocabulary.bin";
 	sprintf( db_path, "/home/bpeer/catkin_ws/src/bpeer_sj/database/%s_database.db", argv[1] );
 	sprintf( img_pose_db_path, "/home/bpeer/catkin_ws/src/bpeer_sj/database/%s_id_locate.txt", argv[1] );
 
@@ -59,7 +60,7 @@ void CreateCommon::process()
 	mclientHbaseOperate.getData( rowResult, table_name, rowKeys, columnName );
 
 	/**
-	 * @brief create database
+	 * @brief deal with data
 	 */
 	pose2D map_pose;
 	cv::Mat curr_image;
@@ -70,10 +71,10 @@ void CreateCommon::process()
 	 * @brief save db
 	 */
 	msaveData.db.save( db_path );
-	std::cout << "db_path: " << db_path << std::endl;
+	std::cout << "db save in: " << db_path << std::endl;
 
 	msaveData.save_file( img_pose_db_path );
-	std::cout << "img_pose_db_path: " << img_pose_db_path << std::endl;
+	std::cout << "img_pose_db save in: " << img_pose_db_path << std::endl;
 
 	mclientHbaseOperate.disconnect();
 }

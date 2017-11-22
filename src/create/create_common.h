@@ -33,7 +33,7 @@ private:
 	Text host;
 	int port;
 
-	char vocab_path[128];
+	std::string vocab_path;
 	char db_path[128];
 	char img_pose_db_path[128];
 
