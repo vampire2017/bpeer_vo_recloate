@@ -44,6 +44,8 @@ void VoRelocate::reset()
 
 	img = cv::Mat();
 	ref_img = cv::Mat();
+
+	db.clear();
 }
 
 void VoRelocate::locateCb(Mat &image, pose2D odom)

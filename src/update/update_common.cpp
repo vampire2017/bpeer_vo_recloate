@@ -56,7 +56,7 @@ void UpdateCommon::process()
 	pose2D map_pose;
 	cv::Mat curr_image;
 	/// 对rowResult进行操作;
-
+	// TODO 需求Hbase的时间戳
 	mupdateData.updateCb( curr_image, map_pose );
 	/**
 	 * @brief save db

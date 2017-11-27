@@ -25,6 +25,7 @@ public:
 		boost::timer t1;
 		voRelocate.db_robot1.load( "/home/bpeer/catkin_ws/src/bpeer_sj/database/database_test.db" );
 		std::cout << "加载数据库耗时：" << t1.elapsed() << std::endl;
+		std::cout<< "load db_robot1.size=> " << voRelocate.db_robot1.size() << std::endl;
 
 		flag1_load_ == false;
 //		test_img = 0;  // test
@@ -39,7 +40,7 @@ public:
 			// todo clear
 			voRelocate.reset();
 			voRelocate.db = voRelocate.db_robot1;
-
+			std::cout<< "load db.size=> " << voRelocate.db.size() << std::endl;
 			boost::timer t1;
 			voRelocate.load_file( "/home/bpeer/catkin_ws/src/bpeer_sj/database/test_id_locate.txt" );
 			std::cout << "load_file time: " << t1.elapsed() << std::endl;
