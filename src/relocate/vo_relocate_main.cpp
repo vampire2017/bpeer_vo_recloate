@@ -72,12 +72,22 @@ public:
 		          << " odom_y:" << data.y
 		          << " odom_th:" << data.th << std::endl;
 
+
 		// TODO return 需要非法判断
 		if ( voRelocate.result_ == NULL )
-			_return = "waiting relocating..";
+		{
+			_return = "{\"mode\" : "
+					+ std::to_string(2)
+					+ "}";
+		}
 		else
-			_return = voRelocate.result_;  //return
-
+		{
+			_return = "{\"mode\" : "
+			          + std::to_string(1)
+			          + ",\"pose_json\" : "
+			          + voRelocate.result_
+			          + "}";
+		}
 		std::cout << "res....: " << voRelocate.result_ << std::endl;
 		voRelocate.result_.clear();  //清空上次值
 		std::cout <<"***********end***********"<<std::endl;
