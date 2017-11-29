@@ -76,19 +76,19 @@ target_link_libraries( update_database_hbase
 
 ##################################
 ###########---test---#############
-#add_executable( test_hbase
-#        src/common/client_test_hbase.cpp
-#
-#        src/common/Hbase.cpp
-#        src/common/Hbase_constants.cpp
-#        src/common/Hbase_types.cpp
-#        )
-#
-#target_link_libraries( test_hbase
-#        ${OpenCV_LIBS}
-#        ${DBoW3_LIBS}
-#        ${THRIFT_LIBS}
-#        )
+add_executable( test_hbase
+        src/common/client_test_hbase.cpp
+
+        src/common/Hbase.cpp
+        src/common/Hbase_constants.cpp
+        src/common/Hbase_types.cpp
+        )
+
+target_link_libraries( test_hbase
+        ${OpenCV_LIBS}
+        ${DBoW3_LIBS}
+        ${THRIFT_LIBS}
+        )
 ########################################
 
 #install( TARGETS create_database RUNTIME DESTINATION bin )
