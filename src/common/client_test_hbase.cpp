@@ -87,21 +87,33 @@ int main(int argc, char** argv)
 		std::cout << "port open. " << std::endl;
 
 		std::vector<TRowResult> rowResult;
-		std::string table_name("relocate_database");
-		std::string rowKey("myhid");
-		std::vector<std::string> rowKeys;
+		std::string table_name("pose");
+		std::string rowKey("myhid_ID");
+		std::vector<Text> columns;
+		columns.push_back("data");
+		int64_t timestamp = 1511872684980;
+		int32_t numVersions;
 		std::map<std::string, std::string> columnName;
-//		columnName.insert( std::make_pair("train", "bpittt") );
-		std::string columns("pose");
-		// TODO get ‘member’,‘xiaofeng’,‘info:age’
-		std::vector<TCell> ro;
-		rowKeys.push_back("myhid");
-		client.getRows(rowResult, table_name, rowKeys, columnName );
-		client.get( ro, table_name, rowKey, columns, columnName );
+		client.getRowWithColumnsTs(rowResult, table_name, rowKey, columns, timestamp, columnName );
 
-		printRow(rowResult);
+		int num_flag = 0;
+		while ( !rowResult.size() && num_flag < 10 )
+		{
+			timestamp++;
+			num_flag++;
+			client.getRowWithColumnsTs(rowResult, table_name, rowKey, columns, timestamp, columnName );
+		}
 		std::cout << "-------------------" << std::endl;
-		printCell(ro);
+		std::cout <<"stamp=> " << timestamp << std::endl;
+		printRow(rowResult);
+
+//		std::vector<TCell> ro;
+//		std::vector<std::string> rowKeys;
+//		columnName.insert( std::make_pair("train", "bpittt") );
+//		rowKeys.push_back("myhid");
+//		client.get( ro, table_name, rowKey, columns, columnName );
+//		client.getVerTs( ro, table_name, rowKey, column, timestamp, numVersions, columnName );
+//		printCell(ro);
 //		std::cout << "value:{ " << std::endl
 //		          << rowResult[0].columns.begin()->second << std::endl
 //		          << "}" << std::endl;
