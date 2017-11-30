@@ -109,10 +109,15 @@ bool ClientHbaseOperate::disconnect()
 	return true;
 }
 
-bool ClientHbaseOperate::getData(std::vector<TRowResult> &rowResult_, const Text &table_name_,
-                                 const std::vector<Text> &rowKeys_, const std::map<Text, Text> &columnName_)
+std::string ClientHbaseOperate::getData(std::vector<TRowResult> &rowResult_, const Text &table_name_, const Text &rowKey_,
+                                 const std::vector<Text> &columns_, const int64_t timestamp_,
+                                 const std::map<Text, Text> &columnName_)
 {
-	mpClient_->getRows( rowResult_, table_name_, rowKeys_, columnName_ );
-	printRow( rowResult_ );
-	std::cout << "-------------------" << std::endl;
+	mpClient_->getRowWithColumnsTs( rowResult_, table_name_, rowKey_, columns_, timestamp_, columnName_ );
+//	for test
+//	std::cout << "Row size of row:=  " << rowResult_.size() << std::endl;
+//	std::cout << "Row size of columns:=  " << rowResult_.begin()->columns.size() << std::endl;
+
+	return rowResult_.begin()->columns.begin()->second.value;
 }
+

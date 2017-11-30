@@ -6,7 +6,7 @@
 #include "create_common.h"
 
 CreateCommon::CreateCommon( char** argv ):
-msaveData(1), mclientHbaseOperate(1)
+mclientHbaseOperate(1), msaveData(1), mreadVideoData(1)
 {
 	host = "q5";
 	port = 9090;
@@ -16,12 +16,17 @@ msaveData(1), mclientHbaseOperate(1)
 	sprintf( db_path, "/home/bpeer/catkin_ws/src/bpeer_sj/database/%s_database.db", argv[1] );
 	sprintf( img_pose_db_path, "/home/bpeer/catkin_ws/src/bpeer_sj/database/%s_id_locate.txt", argv[1] );
 
-	table_name = "relocate_database";
-	Text tmp_key = argv[1];
-	// TODO get ‘member’,‘xiaofeng’,‘info:age’
-	rowKeys.push_back( tmp_key );
-	rowResult.clear();
-	columnName.clear();
+	// video path
+	sprintf( mcVideo_path, "/home/bpeer/catkin_ws/src/bpeer_sj/database/%s/video", argv[1]);
+	files_video_name = mreadVideoData.getFiles( mcVideo_path );
+
+	msTable_name = "pose";
+	msRowKey = argv[1];  // "myhid_ID"
+
+	mvColumns.push_back("data");
+
+	mvRowResult.clear();
+	mmColumnName.clear();
 }
 
 bool CreateCommon::init()
@@ -57,16 +62,59 @@ bool CreateCommon::init()
 
 void CreateCommon::process()
 {
-	mclientHbaseOperate.getData( rowResult, table_name, rowKeys, columnName );
+	for (int j = 0; j < files_video_name.size(); ++j)
+	{
+		std::string video_path = mcVideo_path;
+		video_path = video_path + "/" + files_video_name[j];
+		std::cout << "video path: " << video_path << std::endl;
+		std::cout << "video num => " << j + 1 << std::endl;
+		boost::timer t_1;
+		mreadVideoData.getImgAndTimeFormVideo( video_path, files_video_name[j] );
+		mv_video_datas.push_back( mreadVideoData.mm_video_data );
+
+		std::cout << "num " << j+1 << " using time=> " << t_1.elapsed() << std::endl;
+	}
+
+//	// TODO test
+//	for ( auto n:mv_video_datas ) {
+//		for ( auto tst_img:n ) {
+//			cv::imshow("test img", tst_img.second );
+//			cv::waitKey(10);
+//		}
+//		std::cout << "-- " << std::endl;
+//		cvWaitKey(0);
+//	}
+//	std::cout << "test ok " << std::endl <<std::endl;
 
 	/**
 	 * @brief deal with data
 	 */
 	pose2D map_pose;
 	cv::Mat curr_image;
-	/// 对rowResult进行操作;
-	// TODO 需求Hbase的时间戳
-	msaveData.saveCb( curr_image, map_pose );
+	std::string pose_json; // json {"x":1, "y":2}
+//	time:
+//	    secs: 1502524320
+//	    nsecs: 517476513
+//	x: 14.7011928558
+//	y: 22.0319690704
+//	Deg: -176.386779785
+//	Rad: -3.07853007317
+
+	for ( auto n : mv_video_datas )
+	{
+		for ( auto iter_img : n )
+		{
+			/// iter_img.second=>img; iter_img.first=>time(10位); (int64_t)(iter_img.first * 1000)=>hbase的时间戳是13位;
+			pose_json = mclientHbaseOperate.getData( mvRowResult, msTable_name, msRowKey, mvColumns,
+			                             (int64_t)(iter_img.first * 1000), mmColumnName);
+
+			/// get need data for pose_json
+			map_pose.x = 1; map_pose.y = 1; map_pose.th = 1; map_pose.stamp = 1234567890123 / (1000 * 86400LL); //day
+			curr_image = iter_img.second.clone();
+			msaveData.saveCb( curr_image, map_pose );
+		}
+	}
+
 	/**
 	 * @brief save db
 	 */

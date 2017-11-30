@@ -97,9 +97,12 @@ public:
 	bool connect( std::string host_, int port_);
 	bool disconnect();
 
-	bool getData(std::vector<TRowResult> & rowResult_,
+	// 返回 读取rowResult_中对应的value;
+	std::string getData(std::vector<TRowResult> & rowResult_,
 	             const Text& table_name_,
-	             const std::vector<Text> & rowKeys_,
+	             const Text& rowKey_,
+	             const std::vector<Text> & columns_,
+	             const int64_t timestamp_,
 	             const std::map<Text, Text> & columnName_);
 
 };

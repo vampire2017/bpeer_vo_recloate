@@ -9,7 +9,7 @@ set( DBoW3_INCLUDE_DIRS "/usr/local/include" )
 set( DBoW3_LIBS "/usr/local/lib/libDBoW3.so" )
 
 include_directories(/usr/local/include/thrift)
-set( THRIFT_LIBS "/usr/local/lib/libthrift-0.10.0.so" )
+set( THRIFT_LIBS "/usr/local/lib/libthrift-0.9.3.so" )
 
 set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ./../bin )
 
@@ -18,6 +18,8 @@ add_executable( create_database_hbase
         src/create/hbase_create_database_main.cpp
         src/create/create_database.cpp
         src/create/create_common.cpp
+
+        src/common/read_data_files.cpp
 
         src/common/HbaseOperate.cpp
         src/common/cJSON.c
@@ -58,6 +60,8 @@ add_executable( update_database_hbase
         src/update/hbase_update_database_main.cpp
         src/update/update_database.cpp
         src/update/update_common.cpp
+
+        src/common/read_data_files.cpp
 
         src/common/HbaseOperate.cpp
         src/common/cJSON.c
