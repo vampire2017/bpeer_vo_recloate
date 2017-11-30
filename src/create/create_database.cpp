@@ -30,7 +30,9 @@ void SaveData::saveCb(Mat &image, pose2D g_pose)
 //	internalTimer::Timer::now().ToDAY();
 
 	locate = g_pose;
-	locate.stamp = internalTimer::Timer::now().ToDAY();
+
+//	//@todo 时间戳直接client传输过来的时候,此处可以不用
+//	locate.stamp = internalTimer::Timer::now().ToDAY();
 
 	if( map_pose.empty() )
 	{

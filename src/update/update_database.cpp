@@ -50,8 +50,8 @@ void UpdateData::updateCb(Mat &image, pose2D g_pose)
 
 	locate = g_pose;
 
-	//@todo 时间戳直接client传输过来的时候,此处可以不用
-	locate.stamp = internalTimer::Timer::now().ToDAY();
+//	//@todo 时间戳直接client传输过来的时候,此处可以不用
+//	locate.stamp = internalTimer::Timer::now().ToDAY();
 
 	if( map_pose_new.empty() )
 	{
