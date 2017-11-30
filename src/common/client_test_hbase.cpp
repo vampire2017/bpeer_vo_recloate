@@ -106,7 +106,7 @@ int main(int argc, char** argv)
 		std::cout << "-------------------" << std::endl;
 		std::cout <<"stamp=> " << timestamp << std::endl;
 		printRow(rowResult);
-
+		std::cout <<"value=> " << rowResult.begin()->columns.begin()->second.value << std::endl;
 //		std::vector<TCell> ro;
 //		std::vector<std::string> rowKeys;
 //		columnName.insert( std::make_pair("train", "bpittt") );
