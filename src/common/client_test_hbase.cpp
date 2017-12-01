@@ -97,7 +97,7 @@ int main(int argc, char** argv)
 		client.getRowWithColumnsTs(rowResult, table_name, rowKey, columns, timestamp, columnName );
 
 		int num_flag = 0;
-		while ( !rowResult.size() && num_flag < 10 )
+		while ( rowResult.empty() && num_flag < 10 )
 		{
 			timestamp++;
 			num_flag++;

@@ -102,7 +102,7 @@ public:
 	             const Text& table_name_,
 	             const Text& rowKey_,
 	             const std::vector<Text> & columns_,
-	             const int64_t timestamp_,
+	             int64_t timestamp_,
 	             const std::map<Text, Text> & columnName_);
 
 };
