@@ -107,8 +107,8 @@ int main(int argc, char **argv) {
 	shared_ptr<TProcessor> processor(new WithReturnServiceProcessor(handler));
 	shared_ptr<TServerTransport> serverTransport(new TServerSocket(port));
 	shared_ptr<TTransportFactory> transportFactory(new TBufferedTransportFactory());
-//	shared_ptr<TProtocolFactory> protocolFactory(new TCompactProtocolFactory());
-	shared_ptr<TProtocolFactory> protocolFactory(new TBinaryProtocolFactory());
+	shared_ptr<TProtocolFactory> protocolFactory(new TCompactProtocolFactory());
+//	shared_ptr<TProtocolFactory> protocolFactory(new TBinaryProtocolFactory());
 
 	TSimpleServer server(processor, serverTransport, transportFactory, protocolFactory);
 	server.serve();
