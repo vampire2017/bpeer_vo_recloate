@@ -45,7 +45,9 @@ void VoRelocate::reset()
 	img = cv::Mat();
 	ref_img = cv::Mat();
 
-	db.clear();
+	std::cout << "size of db: " << db.size() << std::endl;
+	if ( db.size() )
+		db.clear();
 }
 
 void VoRelocate::locateCb(Mat &image, pose2D odom)
@@ -77,7 +79,7 @@ void VoRelocate::locateCb(Mat &image, pose2D odom)
 			ref_img = img.clone();
 			ref_locate = locate;
 
-			std::cout << "re_flag : " << std::endl;
+			std::cout << "re_flag : " << re_flag << std::endl;
 			//匹配成功
 			if(re_flag)
 			{
@@ -171,6 +173,7 @@ bool VoRelocate::relocate()
 	DBoW3::BowVector v_ref;
 	db.getVoc_change()->transform( ref_descriptor, v_ref );
 
+	// s(vt, vt-δt)=>当前帧与前一帧的相似度=>先验相似度
 	double score = db.getVoc_change()->score( v_image, v_ref );
 	std::cout << "分值为：  " << score << std::endl;
 
@@ -189,6 +192,8 @@ bool VoRelocate::relocate()
 
 	//图片的比较
 	DBoW3::QueryResults ret;
+//  // here test ok
+//	std::cout << "!!!!!test!!!!!! =>  " << db.size() << std::endl;
 	db.query( vdescriptor, ret, 6 );
 	std::cout << "searching for image returns " << ret << std::endl;
 

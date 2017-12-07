@@ -33,7 +33,8 @@ public:
 
 	void resultReturn(std::string& _return, const std::string& img_, const std::string& ID_, const Data& data)
 	{
-		std::cout << "id: " << ID_ << std::endl;
+		voRelocate.result_.clear();
+//		std::cout << "id: " << ID_ << std::endl;
 		// TODO need to decide robotID
 		if ( !flag1_load_ && ID_ == "myhid" )
 		{
@@ -63,7 +64,7 @@ public:
 		voRelocate.baselink2odom_.th = data.th;
 		voRelocate.locateCb( curr_image, voRelocate.baselink2odom_ );
 
-		std::cout << "callback  out..  " << std::endl;
+//		std::cout << "callback  out..  " << std::endl;
 
 //		cv::imshow("img decode", curr_image);
 //		cv::waitKey(1);
@@ -74,7 +75,7 @@ public:
 
 
 		// TODO return 需要非法判断
-		if ( voRelocate.result_ == NULL )
+		if ( !voRelocate.result_.size() )
 		{
 			_return = "{\"mode\" : "
 					+ std::to_string(2)
@@ -106,7 +107,8 @@ int main(int argc, char **argv) {
 	shared_ptr<TProcessor> processor(new WithReturnServiceProcessor(handler));
 	shared_ptr<TServerTransport> serverTransport(new TServerSocket(port));
 	shared_ptr<TTransportFactory> transportFactory(new TBufferedTransportFactory());
-	shared_ptr<TProtocolFactory> protocolFactory(new TCompactProtocolFactory());
+//	shared_ptr<TProtocolFactory> protocolFactory(new TCompactProtocolFactory());
+	shared_ptr<TProtocolFactory> protocolFactory(new TBinaryProtocolFactory());
 
 	TSimpleServer server(processor, serverTransport, transportFactory, protocolFactory);
 	server.serve();
