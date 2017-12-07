@@ -79,7 +79,7 @@ target_link_libraries( update_database_hbase
 ##############################################
 
 ##################################
-###########---test---#############
+###########---test_hbase---#############
 add_executable( test_hbase
         src/common/client_test_hbase.cpp
 
@@ -95,4 +95,24 @@ target_link_libraries( test_hbase
         )
 ########################################
 
+###########---test_create---#############
+add_executable( test_create
+        src/test/create_database_main.cpp
+        src/create/create_database.cpp
+
+        src/test/createDb_constants.cpp
+        src/test/createDb_types.cpp
+        src/test/CreateDbService.cpp
+        )
+
+target_link_libraries( test_create
+        ${OpenCV_LIBS}
+        ${DBoW3_LIBS}
+        ${THRIFT_LIBS}
+        )
+##############################################
+
+
 #install( TARGETS create_database RUNTIME DESTINATION bin )
+
+
