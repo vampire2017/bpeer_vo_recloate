@@ -23,6 +23,19 @@ public:
 	void process();
 
 public:
+	struct Time_st{
+		uint32_t seces;
+		uint32_t nseces;
+	};
+	struct Pose_st{
+		struct Time_st time;
+		float x;
+		float y;
+		float Deg;
+		float Rad;
+	} *pose_st ;
+
+public:
 	ClientHbaseOperate mclientHbaseOperate;
 	UpdateData mupdateData;
 	ReadVideoData mreadVideoData;

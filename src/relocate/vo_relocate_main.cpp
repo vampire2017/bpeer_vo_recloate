@@ -77,17 +77,15 @@ public:
 		// TODO return 需要非法判断
 		if ( !voRelocate.result_.size() )
 		{
-			_return = "{\"mode\" : "
-					+ std::to_string(2)
-					+ "}";
+			_return = "\"me\" : "
+					+ std::to_string(2);
 		}
 		else
 		{
-			_return = "{\"mode\" : "
+			_return = "\"me\" : "
 			          + std::to_string(1)
 			          + ",\"pose_json\" : "
-			          + voRelocate.result_
-			          + "}";
+			          + voRelocate.result_;
 		}
 		std::cout << "res....: " << voRelocate.result_ << std::endl;
 		voRelocate.result_.clear();  //清空上次值

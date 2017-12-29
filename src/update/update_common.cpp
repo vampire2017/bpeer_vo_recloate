@@ -19,7 +19,7 @@ mclientHbaseOperate(1), mupdateData(1), mreadVideoData(1)
 	files_video_name = mreadVideoData.getFiles( mcVideo_path );
 
 	msTable_name = "pose";
-	msRowKey = argv[1];  // "myhid_ID"
+	msRowKey = argv[1];  // "myhid"
 
 	mvColumns.push_back("data");
 
@@ -83,13 +83,6 @@ void UpdateCommon::process()
 	pose2D map_pose;
 	cv::Mat curr_image;
 	std::string pose_json; // json {"x":1, "y":2}
-//	time:
-//	    secs: 1502524320
-//	    nsecs: 517476513
-//	x: 14.7011928558
-//	y: 22.0319690704
-//	Deg: -176.386779785
-//	Rad: -3.07853007317
 
 	for ( auto n : mv_video_datas )
 	{
@@ -99,8 +92,13 @@ void UpdateCommon::process()
 			pose_json = mclientHbaseOperate.getData( mvRowResult, msTable_name, msRowKey, mvColumns,
 			                                         (int64_t)(iter_img.first * 1000), mmColumnName);
 
+			pose_st = (struct Pose_st*) pose_json.c_str();
+
 			/// get need data for pose_json
-			map_pose.x = 1; map_pose.y = 1; map_pose.th = 1; map_pose.stamp = 1234567890123 / (1000 * 86400LL); //day
+			map_pose.x = pose_st->x;
+			map_pose.y = pose_st->y;
+			map_pose.th = pose_st->Rad;
+			map_pose.stamp = pose_st->time.seces / (1000 * 86400LL); //day
 			curr_image = iter_img.second.clone();
 			mupdateData.updateCb( curr_image, map_pose );
 		}

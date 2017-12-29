@@ -16,12 +16,12 @@ mclientHbaseOperate(1), msaveData(1), mreadVideoData(1)
 	sprintf( db_path, "/home/bpeer/catkin_ws/src/bpeer_sj/database/%s_database.db", argv[1] );
 	sprintf( img_pose_db_path, "/home/bpeer/catkin_ws/src/bpeer_sj/database/%s_id_locate.txt", argv[1] );
 
-	// video path
+//	 get video path
 	sprintf( mcVideo_path, "/home/bpeer/catkin_ws/src/bpeer_sj/database/%s/video", argv[1]);
 	files_video_name = mreadVideoData.getFiles( mcVideo_path );
 
 	msTable_name = "pose";
-	msRowKey = argv[1];  // "myhid_ID"
+	msRowKey = argv[1];  // "myhid"
 
 	mvColumns.push_back("data");
 
@@ -92,24 +92,29 @@ void CreateCommon::process()
 	pose2D map_pose;
 	cv::Mat curr_image;
 	std::string pose_json; // json {"x":1, "y":2}
-//	time:
-//	    secs: 1502524320
-//	    nsecs: 517476513
-//	x: 14.7011928558
-//	y: 22.0319690704
-//	Deg: -176.386779785
-//	Rad: -3.07853007317
 
 	for ( auto n : mv_video_datas )
 	{
 		for ( auto iter_img : n )
 		{
-			/// iter_img.second=>img; iter_img.first=>time(10位); (int64_t)(iter_img.first * 1000)=>hbase的时间戳是13位;
+//			iter_img.second=>img; iter_img.first=>time(10位); (int64_t)(iter_img.first * 1000)=>hbase的时间戳是13位;
 			pose_json = mclientHbaseOperate.getData( mvRowResult, msTable_name, msRowKey, mvColumns,
 			                             (int64_t)(iter_img.first * 1000), mmColumnName);
 
+			pose_st = (struct Pose_st*) pose_json.c_str();
+//			std::cout << "** pose_st **" << std::endl;
+//			std::cout << "x: " << pose_st->x << std::endl;
+//			std::cout << "y: " << pose_st->y << std::endl;
+//			std::cout << "th: " << pose_st->Rad << std::endl;
+//			std::cout << "time: " << pose_st->time.seces << std::endl;
+//			std::cout << "n_time: " << pose_st->time.nseces << std::endl;
+//			std::cout << "** pose_st **" << std::endl;
+
 			/// get need data for pose_json
-			map_pose.x = 1; map_pose.y = 1; map_pose.th = 1; map_pose.stamp = 1234567890123 / (1000 * 86400LL); //day
+			map_pose.x = pose_st->x;
+			map_pose.y = pose_st->y;
+			map_pose.th = pose_st->Rad;
+			map_pose.stamp = pose_st->time.seces / (1000 * 86400LL); //day
 			curr_image = iter_img.second.clone();
 			msaveData.saveCb( curr_image, map_pose );
 		}

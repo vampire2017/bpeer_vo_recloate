@@ -236,5 +236,6 @@ void VoRelocate::load_file(const std::string &filename)
 		locate.th = (float) fw["th"];
 		map_pose.insert( std::make_pair(index, locate) );
 	}
+	fs.release();  // TODO add release
 	std::cout << "读入数据的数量为 :  " << map_pose.size() << std::endl;
 }

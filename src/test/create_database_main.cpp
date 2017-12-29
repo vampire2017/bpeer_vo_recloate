@@ -69,8 +69,8 @@ public:
 		//@todo  test save output
 		if(test_save_data == 27)
 		{
-			msaveData.db.save("/home/bpeer/catkin_ws/src/bpeer_sj/database/database_test_12_07.db");  //DBoW数据库
-			msaveData.save_file("/home/bpeer/catkin_ws/src/bpeer_sj/database/test_id_locate_12_07.txt");  //图片+位姿 数据库
+			msaveData.db.save("/home/bpeer/catkin_ws/src/bpeer_sj/database/database_test_12_18.db");  //DBoW数据库
+			msaveData.save_file("/home/bpeer/catkin_ws/src/bpeer_sj/database/test_id_locate_12_18.txt");  //图片+位姿 数据库
 //			while(1);
 		}
 		///output end
