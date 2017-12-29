@@ -126,6 +126,14 @@ std::string ClientHbaseOperate::getData(std::vector<TRowResult> &rowResult_, con
 		num_flag++;
 		mpClient_->getRowWithColumnsTs( rowResult_, table_name_, rowKey_, columns_, timestamp_, columnName_ );
 	}
-	return rowResult_.begin()->columns.begin()->second.value;
+	std::string ret_value = rowResult_.begin()->columns.begin()->second.value;
+
+	if( ret_value.empty() )
+	{
+		std::cout << "no data return... " << std::endl;
+		return NULL;
+	}
+	else
+		return ret_value;
 }
 

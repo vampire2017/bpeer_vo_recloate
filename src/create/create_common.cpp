@@ -101,7 +101,10 @@ void CreateCommon::process()
 			pose_json = mclientHbaseOperate.getData( mvRowResult, msTable_name, msRowKey, mvColumns,
 			                             (int64_t)(iter_img.first * 1000), mmColumnName);
 
-			pose_st = (struct Pose_st*) pose_json.c_str();
+			if ( pose_json.empty() )
+				continue;
+			else
+				pose_st = (struct Pose_st*) pose_json.c_str();
 //			std::cout << "** pose_st **" << std::endl;
 //			std::cout << "x: " << pose_st->x << std::endl;
 //			std::cout << "y: " << pose_st->y << std::endl;
@@ -111,6 +114,7 @@ void CreateCommon::process()
 //			std::cout << "** pose_st **" << std::endl;
 
 			/// get need data for pose_json
+			// TODO here need to add decide the status of arm
 			map_pose.x = pose_st->x;
 			map_pose.y = pose_st->y;
 			map_pose.th = pose_st->Rad;
