@@ -23,7 +23,7 @@ public:
 		// Your initialization goes here
 		// TODO 加载所有的数据库
 		boost::timer t1;
-		voRelocate.db_robot1.load( "/home/bpeer/catkin_ws/src/bpeer_sj/database/database_test.db" );
+		voRelocate.db_robot1.load( "/home/bpeer/catkin_ws/src/bpeer_sj/database/vo_db_data/database_test_12_18.db" );
 		std::cout << "加载数据库耗时：" << t1.elapsed() << std::endl;
 		std::cout<< "load db_robot1.size=> " << voRelocate.db_robot1.size() << std::endl;
 
@@ -43,7 +43,7 @@ public:
 			voRelocate.db = voRelocate.db_robot1;
 			std::cout<< "load db.size=> " << voRelocate.db.size() << std::endl;
 			boost::timer t1;
-			voRelocate.load_file( "/home/bpeer/catkin_ws/src/bpeer_sj/database/test_id_locate.txt" );
+			voRelocate.load_file( "/home/bpeer/catkin_ws/src/bpeer_sj/database/vo_db_data/test_id_locate_12_18.txt" );
 			std::cout << "load_file time: " << t1.elapsed() << std::endl;
 			// load_file time: 0.000815
 			flag1_load_ = true;

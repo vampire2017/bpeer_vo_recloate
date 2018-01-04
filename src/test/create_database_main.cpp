@@ -26,7 +26,7 @@ public:
 		// Your initialization goes here
 		std::chrono::steady_clock::time_point t100 = std::chrono::steady_clock::now();
 
-		DBoW3::Vocabulary vocab("/home/bpeer/catkin_ws/src/bpeer_sj/database/vocabulary_test.bin");
+		DBoW3::Vocabulary vocab("/home/bpeer/catkin_ws/src/bpeer_sj/database/vo_db_data/vocabulary_test.bin");
 
 		std::chrono::steady_clock::time_point t101 = std::chrono::steady_clock::now();
 		std::chrono::duration<double > time_used = std::chrono::duration_cast< std::chrono::duration<double > >( t101-t100 );
@@ -69,8 +69,8 @@ public:
 		//@todo  test save output
 		if(test_save_data == 27)
 		{
-			msaveData.db.save("/home/bpeer/catkin_ws/src/bpeer_sj/database/database_test_12_18.db");  //DBoW数据库
-			msaveData.save_file("/home/bpeer/catkin_ws/src/bpeer_sj/database/test_id_locate_12_18.txt");  //图片+位姿 数据库
+			msaveData.db.save("/home/bpeer/catkin_ws/src/bpeer_sj/database/database_test_2017.db");  //DBoW数据库
+			msaveData.save_file("/home/bpeer/catkin_ws/src/bpeer_sj/database/test_id_locate_2017.txt");  //图片+位姿 数据库
 //			while(1);
 		}
 		///output end
