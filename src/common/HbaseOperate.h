@@ -31,49 +31,14 @@
 #include <transport/TSocket.h>
 #include <transport/TTransportUtils.h>
 
-#include "Hbase.h"
+//#include "Hbase.h"
+#include "../common_thrift2/THBaseService.h"
 
 using namespace apache::thrift;
 using namespace apache::thrift::protocol;
 using namespace apache::thrift::transport;
 
-using namespace apache::hadoop::hbase::thrift;
-
-namespace {
-
-	typedef std::vector<std::string> StrVec;
-	typedef std::map<std::string,std::string> StrMap;
-	typedef std::vector<ColumnDescriptor> ColVec;
-	typedef std::map<std::string,ColumnDescriptor> ColMap;
-	typedef std::vector<TCell> CellVec;
-	typedef std::map<std::string,TCell> CellMap;
-
-
-	static void
-	printRow(const std::vector<TRowResult> &rowResult)
-	{
-		std::cout << "Row size of row:=  " << rowResult.size() << std::endl;
-		for (size_t i = 0; i < rowResult.size(); i++) {
-			std::cout << "size of columns in row:= " << rowResult[i].columns.size() << std::endl;
-			std::cout << "row: " << rowResult[i].row << ", cols: ";
-			for (CellMap::const_iterator it = rowResult[i].columns.begin();
-			     it != rowResult[i].columns.end(); ++it) {
-				std::cout << it->first << " => " << it->second.value << "; ";
-			}
-			std::cout << std::endl;
-		}
-	}
-
-	static void
-	printCell(const std::vector<TCell> &cellResult)
-	{
-		std::cout << "Cell size of row:=  " << cellResult.size() << std::endl;
-		for (size_t i = 0; i < cellResult.size(); i++) {
-			std::cout << "cellResult.value:= "<< " => " << cellResult[i].value << "; ";
-			std::cout << std::endl;
-		}
-	}
-}
+using namespace apache::hadoop::hbase::thrift2;
 
 class ClientHbaseOperate
 {
@@ -86,7 +51,7 @@ private:
 	boost::shared_ptr<TTransport> transport;
 	boost::shared_ptr<TProtocol> protocol;
 
-	HbaseClient *mpClient_;
+	THBaseServiceClient *mpClient_;
 
 	std::string msHbaseServiceHost_;
 	int mnHbaseServicePort_;
@@ -98,12 +63,9 @@ public:
 	bool disconnect();
 
 	// 返回 读取rowResult_中对应的value;
-	std::string getData(std::vector<TRowResult> & rowResult_,
-	             const Text& table_name_,
-	             const Text& rowKey_,
-	             const std::vector<Text> & columns_,
-	             int64_t timestamp_,
-	             const std::map<Text, Text> & columnName_);
+	std::string getData( TResult &rowResult_,
+	             const std::string &table_name_,
+	             TGet &tGet );
 
 };
 

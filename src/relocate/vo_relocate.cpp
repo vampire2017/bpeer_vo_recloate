@@ -179,7 +179,7 @@ bool VoRelocate::relocate()
 
 	if( score > common_threa )
 		common_threa = score;
-	common_threa *= 0.3;   //common_threa *= 0.4;
+	common_threa *= 0.4;   //common_threa *= 0.4;
 	if( common_threa < 0.001 )
 		common_threa = 0.001;
 

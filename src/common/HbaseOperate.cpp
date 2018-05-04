@@ -55,7 +55,7 @@ bool ClientHbaseOperate::connect()
 		transport.reset( new TBufferedTransport(socket) );
 		protocol.reset( new TBinaryProtocol(transport) );
 
-		mpClient_ = new HbaseClient(protocol);
+		mpClient_ = new THBaseServiceClient(protocol);
 		transport->open();
 	}
 	catch (const TException &tx)
@@ -106,27 +106,17 @@ bool ClientHbaseOperate::disconnect()
 		return false;
 	}
 	mbIsConnected_ = false;
+
+	delete mpClient_;
+	mpClient_ == NULL;
+
 	return true;
 }
 
-std::string ClientHbaseOperate::getData(std::vector<TRowResult> &rowResult_, const Text &table_name_, const Text &rowKey_,
-                                 const std::vector<Text> &columns_, int64_t timestamp_,
-                                 const std::map<Text, Text> &columnName_)
+std::string ClientHbaseOperate::getData(TResult &rowResult_, const std::string &table_name_, TGet &tGet)
 {
-	mpClient_->getRowWithColumnsTs( rowResult_, table_name_, rowKey_, columns_, timestamp_, columnName_ );
-//	for test
-//	std::cout << "Row size of row:=  " << rowResult_.size() << std::endl;
-//	std::cout << "Row size of columns:=  " << rowResult_.begin()->columns.size() << std::endl;
-
-	// to avoid return NULL
-	int num_flag = 0;
-	while ( rowResult_.empty() && num_flag < 10  )
-	{
-		timestamp_++;
-		num_flag++;
-		mpClient_->getRowWithColumnsTs( rowResult_, table_name_, rowKey_, columns_, timestamp_, columnName_ );
-	}
-	std::string ret_value = rowResult_.begin()->columns.begin()->second.value;
+	mpClient_->get( rowResult_, table_name_, tGet );
+	std::string ret_value = rowResult_.columnValues.begin()->value;
 
 	if( ret_value.empty() )
 	{

@@ -8,7 +8,7 @@
 UpdateCommon::UpdateCommon( char** argv ):
 mclientHbaseOperate(1), mupdateData(1), mreadVideoData(1)
 {
-	host = "q5";
+	host = "192.168.1.6";
 	port = 9090;
 
 	sprintf( db_path, "/home/bpeer/catkin_ws/src/bpeer_sj/database/%s_database.db", argv[1] );
@@ -18,13 +18,9 @@ mclientHbaseOperate(1), mupdateData(1), mreadVideoData(1)
 	sprintf( mcVideo_path, "/home/bpeer/catkin_ws/src/bpeer_sj/database/%s/video", argv[1]);
 	files_video_name = mreadVideoData.getFiles( mcVideo_path );
 
-	msTable_name = "pose";
-	msRowKey = argv[1];  // "myhid"
+	mtable_name = "Q_pose";
 
-	mvColumns.push_back("data");
-
-	mvRowResult.clear();
-	mmColumnName.clear();
+	mtGet.__set_row( "Q_1" );
 }
 
 bool UpdateCommon::init()
@@ -83,14 +79,16 @@ void UpdateCommon::process()
 	pose2D map_pose;
 	cv::Mat curr_image;
 	std::string pose_json; // json {"x":1, "y":2}
+	TTimeRange stampRange;
 
 	for ( auto n : mv_video_datas )
 	{
 		for ( auto iter_img : n )
 		{
 			/// iter_img.second=>img; iter_img.first=>time(10位); (int64_t)(iter_img.first * 1000)=>hbase的时间戳是13位;
-			pose_json = mclientHbaseOperate.getData( mvRowResult, msTable_name, msRowKey, mvColumns,
-			                                         (int64_t)(iter_img.first * 1000), mmColumnName);
+			stampRange.minStamp = (int64_t)(iter_img.first * 1000) - 10;
+			stampRange.maxStamp = (int64_t)(iter_img.first * 1000) + 10;
+			pose_json = mclientHbaseOperate.getData( mtResult, mtable_name, mtGet );
 
 			if ( pose_json.empty() )
 				continue;

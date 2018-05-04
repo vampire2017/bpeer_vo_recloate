@@ -41,6 +41,8 @@ public:
 
 		DBoW3::Database db_t( vocab, false, 0 );
 		msaveData.db = db_t;
+
+
 	}
 
 	void createDb(const std::string& img_, const Data& data)
@@ -69,9 +71,9 @@ public:
 		//@todo  test save output
 		if(test_save_data == 27)
 		{
-			msaveData.db.save("/home/bpeer/catkin_ws/src/bpeer_sj/database/database_test_2017.db");  //DBoW数据库
-			msaveData.save_file("/home/bpeer/catkin_ws/src/bpeer_sj/database/test_id_locate_2017.txt");  //图片+位姿 数据库
-//			while(1);
+			msaveData.db.save("/home/bpeer/catkin_ws/src/bpeer_sj/database/vo_db_data/database_test_2018_01_29.db");  //DBoW数据库
+			msaveData.save_file("/home/bpeer/catkin_ws/src/bpeer_sj/database/vo_db_data/test_id_locate_2018_01_29.txt");  //图片+位姿 数据库
+			while(1);
 		}
 		///output end
 	}
@@ -80,6 +82,7 @@ public:
 	SaveData msaveData;
 	char test_save_data;
 
+	cv::VideoWriter *writer = 0;
 };
 
 int main( int argc, char** argv )

@@ -23,7 +23,7 @@ public:
 		// Your initialization goes here
 		// TODO 加载所有的数据库
 		boost::timer t1;
-		voRelocate.db_robot1.load( "/home/bpeer/catkin_ws/src/bpeer_sj/database/vo_db_data/database_test_12_18.db" );
+		voRelocate.db_robot1.load( "/home/bpeer/catkin_ws/src/bpeer_sj/database/vo_db_data/database_test_2018_01_29.db" );
 		std::cout << "加载数据库耗时：" << t1.elapsed() << std::endl;
 		std::cout<< "load db_robot1.size=> " << voRelocate.db_robot1.size() << std::endl;
 
@@ -34,7 +34,7 @@ public:
 	void resultReturn(std::string& _return, const std::string& img_, const std::string& ID_, const Data& data)
 	{
 		voRelocate.result_.clear();
-//		std::cout << "id: " << ID_ << std::endl;
+		std::cout << "id: " << ID_ << std::endl;
 		// TODO need to decide robotID
 		if ( !flag1_load_ && ID_ == "myhid" )
 		{
@@ -43,7 +43,7 @@ public:
 			voRelocate.db = voRelocate.db_robot1;
 			std::cout<< "load db.size=> " << voRelocate.db.size() << std::endl;
 			boost::timer t1;
-			voRelocate.load_file( "/home/bpeer/catkin_ws/src/bpeer_sj/database/vo_db_data/test_id_locate_12_18.txt" );
+			voRelocate.load_file( "/home/bpeer/catkin_ws/src/bpeer_sj/database/vo_db_data/test_id_locate_2018_01_29.txt" );
 			std::cout << "load_file time: " << t1.elapsed() << std::endl;
 			// load_file time: 0.000815
 			flag1_load_ = true;
@@ -54,6 +54,8 @@ public:
 		cv::Mat curr_image = cv::imdecode( bytesImg, CV_LOAD_IMAGE_COLOR );
 		std::cout <<"***********start***********"<<std::endl;
 
+		cv::imshow("img_decode", curr_image);  // for test
+		cv::waitKey(1);
 //		char im_jpg[128];
 //		sprintf(im_jpg, "%d.jpg", test_img++);
 //		cv::imwrite(im_jpg, curr_image);   //  将image图像保存.jpg

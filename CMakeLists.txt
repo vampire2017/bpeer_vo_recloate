@@ -24,9 +24,9 @@ add_executable( create_database_hbase
         src/common/HbaseOperate.cpp
         src/common/cJSON.c
 
-        src/common/Hbase.cpp
-        src/common/Hbase_constants.cpp
-        src/common/Hbase_types.cpp
+        src/common_thrift2/THBaseService.cpp
+        src/common_thrift2/hbase_constants.cpp
+        src/common_thrift2/hbase_types.cpp
         )
 
 target_link_libraries( create_database_hbase
@@ -66,9 +66,9 @@ add_executable( update_database_hbase
         src/common/HbaseOperate.cpp
         src/common/cJSON.c
 
-        src/common/Hbase.cpp
-        src/common/Hbase_constants.cpp
-        src/common/Hbase_types.cpp
+        src/common_thrift2/THBaseService.cpp
+        src/common_thrift2/hbase_constants.cpp
+        src/common_thrift2/hbase_types.cpp
         )
 
 target_link_libraries( update_database_hbase
